@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scope and limitations of the FullSite Shot Chrome extension.">
+  <title>Scope and limitations — FullSite Shot</title>
+  <link rel="icon" href="icon-48.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html"><img src="icon-48.png" width="36" height="36" alt=""><strong>FullSite Shot</strong></a>
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <a class="language-link" href="es/scope.html" lang="es">Español</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Scope and limitations</h1>
+    <p class="lead">FullSite Shot is built for ordinary web pages, including pages much taller than the screen. Chrome or the page’s own structure can still limit the result.</p>
+
+    <h2>Embedded content</h2>
+    <p>What appears on screen is captured. If an embedded video, map, form, document, or other page has its own scroll area, content hidden inside that area may not be included. When that content fills almost the whole tab, FullSite Shot tries to walk it.</p>
+
+    <h2>Inner panels and lists</h2>
+    <p>If a table, list, or panel is essentially the whole page, the extension tries to capture it fully. A small panel inside a larger page is captured as it appears; its hidden overflow may be omitted.</p>
+
+    <h2>Pages that load forever</h2>
+    <p>Sites that keep loading as you scroll are stopped at a safety limit so a capture cannot run indefinitely.</p>
+
+    <h2>Very large pages</h2>
+    <p>Chrome has practical image-size limits. An exceptionally large page may be scaled down proportionally so it still fits in one image. Content is not stretched. If it still exceeds the safety limit, capture stops.</p>
+
+    <h2>PDF files</h2>
+    <p>Chrome’s built-in PDF viewer is not a normal web page. FullSite Shot can show what is on screen; it is not designed to turn a full PDF into one continuous capture.</p>
+
+    <h2>Local files and protected pages</h2>
+    <p>Local HTML requires “Allow access to file URLs” in the extension details. Chrome blocks <code>chrome://</code>, the Chrome Web Store, and other internal pages.</p>
+
+    <h2>Content that keeps changing</h2>
+    <p>Videos, GIFs, live charts, or other moving elements may show different moments in different stretches of the capture.</p>
+
+    <h2>If something goes wrong</h2>
+    <p>If a tile fails, the capture is aborted rather than delivering a damaged image without warning. The extension tries to restore the page to the state it had before capture started.</p>
+    <p>Incognito requires enabling the extension for that mode in Chrome. Developer-tools device emulation is not guaranteed.</p>
+  </main>
+  <footer>FullSite Shot · Root Digital CR · <a href="https://root-cr.com/extensions" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">More extensions</a> · Scope</footer>
+</body>
+</html>

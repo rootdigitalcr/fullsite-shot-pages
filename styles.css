@@ -1,0 +1,37 @@
+:root {
+  color-scheme: light dark;
+  --bg: #eef3fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #5b6b82;
+  --line: #dbe4f2;
+  --accent: #1d5fe8;
+  font-family: Inter, "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.65; }
+header, main, footer { width: min(900px, calc(100% - 32px)); margin-inline: auto; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 0; }
+.brand { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; font-size: 1.15rem; font-weight: 750; }
+.brand img { width: 36px; height: 36px; border-radius: 10px; }
+nav { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+nav a, main a, footer a { color: var(--accent); }
+.language-link { padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-size: .85rem; font-weight: 700; }
+main { padding: clamp(24px, 5vw, 56px); border: 1px solid var(--line); border-radius: 24px; background: var(--card); box-shadow: 0 22px 60px rgba(15, 23, 42, .08); }
+h1 { margin: .2em 0 .35em; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; letter-spacing: -.045em; }
+h2 { margin-top: 2em; font-size: 1.35rem; }
+.lead { color: var(--muted); font-size: 1.15rem; }
+.updated { color: var(--muted); font-size: 0.92rem; }
+.notice { padding: 14px 18px; border-left: 4px solid var(--accent); border-radius: 8px; background: color-mix(in srgb, var(--accent) 8%, var(--card)); }
+footer { padding: 28px 0 48px; color: var(--muted); font-size: .9rem; text-align: center; }
+code, kbd { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0b1220; --card: #121a2b; --text: #eef3ff; --muted: #a8b4c8; --line: #2a364d; }
+}
+
+@media (max-width: 620px) {
+  header { align-items: flex-start; flex-direction: column; }
+  main { border-radius: 18px; }
+}

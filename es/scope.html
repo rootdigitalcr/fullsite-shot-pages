@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Alcance y limitaciones de la extensión FullSite Shot para Chrome.">
+  <title>Alcance y limitaciones — FullSite Shot</title>
+  <link rel="icon" href="../icon-48.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html"><img src="../icon-48.png" width="36" height="36" alt=""><strong>FullSite Shot</strong></a>
+    <nav>
+      <a href="privacy.html">Privacidad</a>
+      <a href="support.html">Soporte</a>
+      <a class="language-link" href="../scope.html" lang="en">English</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Alcance y limitaciones</h1>
+    <p class="lead">FullSite Shot está pensado para páginas web normales, incluidas las mucho más altas que la pantalla. Chrome o la propia estructura de la página pueden limitar el resultado.</p>
+
+    <h2>Contenido incrustado</h2>
+    <p>Se captura lo que aparece en pantalla. Si un vídeo, mapa, formulario, documento u otra página incrustada tiene su propio desplazamiento, el contenido oculto dentro de esa zona puede no incluirse. Cuando ese contenido ocupa casi toda la pestaña, FullSite Shot intenta recorrerlo.</p>
+
+    <h2>Paneles internos y listas</h2>
+    <p>Si una tabla, lista o panel es básicamente toda la página, la extensión intenta capturarlo por completo. Un panel pequeño dentro de una página más grande se captura tal como se ve; su desbordamiento oculto puede omitirse.</p>
+
+    <h2>Páginas que cargan sin fin</h2>
+    <p>Los sitios que siguen cargando al desplazarte se detienen en un límite de seguridad para que una captura no corra indefinidamente.</p>
+
+    <h2>Páginas muy grandes</h2>
+    <p>Chrome tiene límites prácticos de tamaño de imagen. Una página excepcionalmente grande puede reducirse de forma proporcional para que quepa en una sola imagen. El contenido no se estira. Si aún supera el límite de seguridad, la captura se detiene.</p>
+
+    <h2>Archivos PDF</h2>
+    <p>El visor de PDF de Chrome no es una página web normal. FullSite Shot puede mostrar lo que hay en pantalla; no está diseñado para convertir un PDF completo en una captura continua.</p>
+
+    <h2>Archivos locales y páginas protegidas</h2>
+    <p>El HTML local requiere «Permitir el acceso a URL de archivo» en los detalles de la extensión. Chrome bloquea <code>chrome://</code>, Chrome Web Store y otras páginas internas.</p>
+
+    <h2>Contenido que sigue cambiando</h2>
+    <p>Vídeos, GIFs, gráficos en vivo u otros elementos en movimiento pueden mostrar momentos distintos en tramos distintos de la captura.</p>
+
+    <h2>Si algo falla</h2>
+    <p>Si una tesela falla, la captura se aborta en lugar de entregar una imagen dañada sin aviso. La extensión intenta devolver la página al estado que tenía antes de empezar.</p>
+    <p>Incógnito requiere habilitar la extensión para ese modo en Chrome. La emulación de dispositivo de las herramientas de desarrollador no está garantizada.</p>
+  </main>
+  <footer>FullSite Shot · Root Digital CR · <a href="https://root-cr.com/extensions" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Más extensiones</a> · Alcance</footer>
+</body>
+</html>
