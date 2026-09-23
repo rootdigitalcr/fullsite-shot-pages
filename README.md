@@ -13,4 +13,4 @@ It does **not** contain the FullSite Shot extension source code.
 - [Public support tracker](https://github.com/rootdigitalcr/fullsite-shot-pages/issues)
 - [Español](https://rootdigitalcr.github.io/fullsite-shot-pages/es/)
 
-FullSite Shot captures a complete web page as a single image, lets you annotate it locally, and exports PNG or PDF on the device. Captures, URLs, titles, and annotations stay in the local Chrome profile. There are no analytics, accounts, advertisements, or developer telemetry.
+FullSite Shot captures a complete web page as a single image, lets you annotate it locally, and exports PNG or PDF on the device. Captures are temporary: they exist only while the viewer tab stays open. There are no analytics, accounts, advertisements, or developer telemetry.

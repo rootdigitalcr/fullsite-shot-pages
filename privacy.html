@@ -19,18 +19,19 @@
     </nav>
   </header>
   <main>
-    <p class="updated">Last updated: 22 September 2026</p>
+    <p class="updated">Last updated: 23 September 2026</p>
     <h1>Privacy Policy</h1>
     <p class="lead">FullSite Shot captures the active tab only after an explicit action from you (toolbar icon or keyboard shortcut). There is no background capture and no monitoring of your browsing.</p>
     <p class="notice"><strong>Only when you ask.</strong> The process starts when you click the icon or shortcut, and it finishes in your Chrome.</p>
 
     <h2>Information handled</h2>
-    <p>After you start a capture, FullSite Shot takes on-screen tiles of the active tab (images of website content), stitches them into one PNG, and stores that capture locally so you can view, annotate, copy, or export it. For each capture it also stores the page URL, title, dimensions, timestamp, and a filename derived from the host. If you draw on the capture, it stores those annotations and a short local undo/redo history.</p>
-    <p>That local URL/title/date record is limited to pages you chose to capture. It is not a history of all sites you visit.</p>
+    <p>After you start a capture, FullSite Shot takes on-screen tiles of the active tab (images of website content) and stitches them into one PNG in memory. The viewer lets you annotate, copy, or export that image. Annotations exist only in that tab.</p>
+    <p>FullSite Shot does not keep a library of captures. It does not store the page URL, title, or capture date.</p>
 
     <h2>Where it is stored</h2>
-    <p>Captures and annotations live in IndexedDB of this Chrome profile (<code>fullsite-shot</code>). Interface language and theme live in <code>chrome.storage.local</code>. While a capture is running, <code>chrome.storage.session</code> keeps only the tab id and a start time so the page can be restored if Chrome interrupts the worker; session storage never holds images or URLs.</p>
-    <p>Nothing in that storage is sent to Root Digital CR, to analytics, or to third parties.</p>
+    <p>The capture and annotations live only in the memory of the open viewer tab. Reloading or closing that tab discards them. They are not written to IndexedDB, chrome.storage.local, chrome.storage.sync, or any other persistent store.</p>
+    <p>Interface language and theme live in <code>chrome.storage.local</code>. While a capture is running, <code>chrome.storage.session</code> keeps only the tab id and a start time so the page can be restored if Chrome interrupts the worker; session storage never holds images, URLs, or titles.</p>
+    <p>Nothing in that processing is sent to Root Digital CR, to analytics, or to third parties.</p>
 
     <h2>What is not collected</h2>
     <p>There is no analytics, advertising, tracking, telemetry, or accounts. FullSite Shot does not use remote code, CDNs, or runtime-downloaded scripts. Root Digital CR does not receive screenshots, page content, URLs, titles, or annotations.</p>
@@ -38,8 +39,7 @@
     <h2>Permissions</h2>
     <p><strong>activeTab.</strong> Identifies the visible tab when you start a capture. It does not grant ongoing access to other sites.</p>
     <p><strong>scripting.</strong> Injects a short script into that tab to measure it, scroll it, and freeze fixed elements during capture. The effect is removed when finished.</p>
-    <p><strong>storage.</strong> Stores the interface language and theme in this profile. While a capture is in progress, it also stores only that tab’s id so the page can be put back if Chrome interrupts the process. It does not include the image or the page address.</p>
-    <p><strong>unlimitedStorage.</strong> Lets large captures be stored in this profile’s IndexedDB. Without it, Chrome might trim or reject images of long pages.</p>
+    <p><strong>storage.</strong> Stores the interface language and theme in this profile. While a capture is in progress, chrome.storage.session also stores only that tab’s id and a start time so the page can be put back if Chrome interrupts the process. It does not include the image, URL, or title.</p>
     <p><strong>contextMenus.</strong> Adds Help and Settings to the extension icon menu.</p>
 
     <h2>External services</h2>
@@ -47,7 +47,7 @@
     <p>If you voluntarily open a support request, GitHub processes the information you submit under its own terms. Support requests are public. FullSite Shot never attaches captures or preferences automatically.</p>
 
     <h2>Deletion</h2>
-    <p>Uninstalling FullSite Shot or clearing the extension’s site data in Chrome removes captures, annotations, and preferences from that profile. Clearing a capture in the viewer removes that image and its annotations.</p>
+    <p>Closing or reloading the viewer discards the capture and annotations. Uninstalling FullSite Shot or clearing the extension’s site data in Chrome removes language and theme preferences. Copy and download are your actions: those files stay where you saved them or on the clipboard.</p>
 
     <h2>Limited Use disclosure</h2>
     <p class="notice">The use of information received from Chrome APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide the capture, viewer, annotation, and export features; it is not sold or transferred for advertising, profiling, or unrelated purposes, and it is not made available for human reading through developer systems.</p>
