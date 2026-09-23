@@ -19,18 +19,19 @@
     </nav>
   </header>
   <main>
-    <p class="updated">Última actualización: 22 de septiembre de 2026</p>
+    <p class="updated">Última actualización: 23 de septiembre de 2026</p>
     <h1>Política de privacidad</h1>
     <p class="lead">FullSite Shot captura la pestaña activa solo después de una acción explícita tuya (icono o atajo). No hay captura en segundo plano ni vigilancia de tu navegación.</p>
     <p class="notice"><strong>Solo cuando lo pides.</strong> El proceso empieza al pulsar el icono o el atajo y termina en tu Chrome.</p>
 
     <h2>Información que se trata</h2>
-    <p>Tras iniciar una captura, FullSite Shot toma teselas de lo visible en la pestaña activa (imágenes del contenido del sitio), las une en un PNG y guarda esa captura en local para que puedas verla, anotarla, copiarla o exportarla. Por cada captura también guarda la URL, el título, las dimensiones, la fecha y un nombre de archivo derivado del host. Si dibujas sobre la captura, guarda esas anotaciones y un historial local breve de deshacer/rehacer.</p>
-    <p>Ese registro local de URL/título/fecha se limita a las páginas que elegiste capturar. No es un historial de todos los sitios que visitas.</p>
+    <p>Tras iniciar una captura, FullSite Shot toma teselas de lo visible en la pestaña activa (imágenes del contenido del sitio) y las une en un PNG en memoria. El visor permite anotar, copiar o exportar esa imagen. Las anotaciones existen solo en esa pestaña.</p>
+    <p>FullSite Shot no mantiene una biblioteca de capturas. No almacena la URL, el título ni la fecha de las páginas capturadas.</p>
 
     <h2>Dónde se guarda</h2>
-    <p>Las capturas y anotaciones viven en IndexedDB de este perfil de Chrome (<code>fullsite-shot</code>). El idioma de la interfaz y el tema viven en <code>chrome.storage.local</code>. Mientras hay una captura en curso, <code>chrome.storage.session</code> guarda solo el id de la pestaña y una hora de inicio para restaurar la página si Chrome interrumpe el worker; el almacenamiento de sesión nunca guarda imágenes ni URLs.</p>
-    <p>Nada de ese almacenamiento se envía a Root Digital CR, a analítica ni a terceros.</p>
+    <p>La captura y las anotaciones viven solo en la memoria de la pestaña abierta del visor. Recargar o cerrar esa pestaña las descarta. No se escriben en IndexedDB, chrome.storage.local, chrome.storage.sync ni ningún otro almacén persistente.</p>
+    <p>El idioma de la interfaz y el tema viven en <code>chrome.storage.local</code>. Mientras hay una captura en curso, <code>chrome.storage.session</code> guarda solo el id de la pestaña y una hora de inicio para restaurar la página si Chrome interrumpe el worker; el almacenamiento de sesión nunca guarda imágenes, URLs ni títulos.</p>
+    <p>Nada de ese procesamiento se envía a Root Digital CR, a analítica ni a terceros.</p>
 
     <h2>Qué no se recopila</h2>
     <p>No hay analítica, publicidad, rastreo, telemetría ni cuentas. FullSite Shot no usa código remoto, CDN ni scripts descargados en tiempo de ejecución. Root Digital CR no recibe capturas, contenido de páginas, URLs, títulos ni anotaciones.</p>
@@ -38,8 +39,7 @@
     <h2>Permisos</h2>
     <p><strong>activeTab.</strong> Identifica la pestaña visible cuando inicias una captura. No da acceso permanente a otros sitios.</p>
     <p><strong>scripting.</strong> Inyecta un script breve en esa pestaña para medirla, recorrerla y congelar elementos fijos durante la captura. El efecto se retira al terminar.</p>
-    <p><strong>storage.</strong> Guarda el idioma y el tema en este perfil. Mientras hay una captura en curso, también guarda solo el id de esa pestaña para poder devolver la página si Chrome interrumpe el proceso. No incluye la imagen ni la dirección.</p>
-    <p><strong>unlimitedStorage.</strong> Permite guardar capturas grandes en IndexedDB de este perfil. Sin él, Chrome podría recortar o rechazar imágenes de páginas largas.</p>
+    <p><strong>storage.</strong> Guarda el idioma y el tema en este perfil. Mientras hay una captura en curso, chrome.storage.session también guarda solo el id de esa pestaña y una hora de inicio para poder devolver la página si Chrome interrumpe el proceso. No incluye la imagen, la URL ni el título.</p>
     <p><strong>contextMenus.</strong> Añade Ayuda y Configuración al menú del icono de la extensión.</p>
 
     <h2>Servicios externos</h2>
@@ -47,7 +47,7 @@
     <p>Si abres voluntariamente una solicitud de soporte, GitHub trata la información que envíes según sus propios términos. Las solicitudes de soporte son públicas. FullSite Shot nunca adjunta capturas ni preferencias de forma automática.</p>
 
     <h2>Eliminación</h2>
-    <p>Desinstalar FullSite Shot o borrar los datos de la extensión en Chrome elimina capturas, anotaciones y preferencias de ese perfil. Vaciar una captura en el visor elimina esa imagen y sus anotaciones.</p>
+    <p>Cerrar o recargar el visor descarta la captura y las anotaciones. Desinstalar FullSite Shot o borrar los datos de la extensión en Chrome elimina idioma y tema. Copiar y descargar son acciones tuyas: esos archivos quedan donde los guardaste o en el portapapeles.</p>
 
     <h2>Divulgación Limited Use</h2>
     <p class="notice">El uso de la información recibida de las APIs de Chrome se ajusta a la Chrome Web Store User Data Policy, incluidos los requisitos de Limited Use. La información se usa solo para ofrecer captura, visor, anotación y exportación; no se vende ni se transfiere para publicidad, perfiles ni fines no relacionados, y no se pone a disposición de lectura humana a través de sistemas del desarrollador.</p>
